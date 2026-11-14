@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ward Development Gallery – Ward No. 65</title>
+<meta name="description" content="Photographs and before-and-after pictures of development work across Ward No. 65, Hubballi.">
+<meta name="theme-color" content="#0b2a5b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="gallery">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.gallery">Gallery</span></nav>
+      <h1 data-i18n="gallery.title">Ward Development Gallery</h1>
+      <p data-i18n="gallery.sub">See the work that has been done in your neighbourhood – with before-and-after photographs.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters">
+        <div><span class="filter-label" data-i18n="filter.category">Category</span><div class="chip-row" id="gCat"></div></div>
+        <div><span class="filter-label" data-i18n="filter.area">Area</span><div class="chip-row" id="gArea"></div></div>
+        <label class="checkbox"><input type="checkbox" id="gPair"><span data-i18n="gallery.pairOnly">Show only before &amp; after</span></label>
+      </div>
+
+      <div class="hint" id="gCount" aria-live="polite" style="margin-bottom:.8rem"></div>
+      <div class="gallery-grid" id="gGrid"></div>
+      <p class="center mt-2"><button type="button" class="btn btn-secondary" id="gMore" hidden data-i18n="more">Show more</button></p>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/gallery.js"></script>
+</body>
+</html>

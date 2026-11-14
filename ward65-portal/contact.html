@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; Public Grievance – Ward No. 65</title>
+<meta name="description" content="Ward No. 65 office contact details, public representatives, map location and emergency civic complaint information.">
+<meta name="theme-color" content="#0b2a5b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="contact">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.contact.full">Contact Us</span></nav>
+      <h1 data-i18n="contact.title">Contact &amp; Public Grievance</h1>
+      <p data-i18n="contact.sub">Reach the ward office and your representatives, or report a civic problem online.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="card" id="officeCard">
+          <h2 style="font-size:1.35rem" data-i18n="contact.office">Ward Office</h2>
+          <div id="officeInfo"></div>
+          <div class="btn-row" style="margin-top:1rem" id="officeActions"></div>
+        </div>
+
+        <div class="card" id="repCard">
+          <h2 style="font-size:1.35rem" data-i18n="contact.reps">Public Representatives</h2>
+          <div id="repInfo"></div>
+        </div>
+
+        <div class="card" id="mapCard" hidden>
+          <h2 style="font-size:1.35rem" data-i18n="contact.map">Find us on the map</h2>
+          <div id="mapBox"></div>
+        </div>
+
+        <div class="card emergency" id="emergencyCard">
+          <h2 style="font-size:1.35rem;color:#fff" data-i18n="contact.emergency">Emergency civic complaints</h2>
+          <p data-i18n="contact.emergency.112">In a life-threatening emergency, call 112 (India’s emergency number) immediately.</p>
+          <p data-i18n="contact.emergency.civic">For urgent civic hazards – a fallen tree, a burst water main, an open manhole, a flooded road – register a complaint online with a photograph and mention “URGENT” in the description. Also call the ward office if a number is listed.</p>
+          <div id="emergencyInfo"></div>
+          <div class="btn-row" style="margin-top:.8rem">
+            <a class="btn" href="tel:112"><i data-icon="phone"></i><span data-i18n="contact.call112">Call 112</span></a>
+            <a class="btn" href="complaint.html"><i data-icon="clipboard"></i><span data-i18n="home.cta.register">Register a Complaint</span></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card mt-2" style="text-align:center">
+        <h2 style="font-size:1.35rem" data-i18n="contact.grievance">Public grievance</h2>
+        <p style="max-width:640px;margin:0 auto 1.2rem" data-i18n="contact.grievance.d">Every complaint registered on this website is recorded, given a complaint ID and followed up by the ward office. You can check its progress at any time.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-green btn-lg" href="complaint.html"><i data-icon="clipboard"></i><span data-i18n="home.cta.register">Register a Complaint</span></a>
+          <a class="btn btn-secondary btn-lg" href="track.html"><i data-icon="search"></i><span data-i18n="home.cta.track">Track Your Complaint</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

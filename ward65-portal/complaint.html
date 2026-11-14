@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register a Complaint – Ward No. 65</title>
+<meta name="description" content="Report a civic problem in Ward No. 65, Hubballi. Upload photos, get a complaint ID and track progress.">
+<meta name="theme-color" content="#0b2a5b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="complaint">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.complaint">Register Complaint</span></nav>
+      <h1 data-i18n="complaint.title">Register a Complaint</h1>
+      <p data-i18n="complaint.sub">Tell us about the problem in your area. It takes about two minutes and no account is needed.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:900px">
+
+      <div id="formWrap">
+        <div class="privacy-note"><i data-icon="shield-check"></i><div data-i18n="complaint.privacy">Your name, mobile number and complaint details are kept private. They are visible only to ward office staff and are never shown on this website.</div></div>
+
+        <form id="complaintForm" class="form-card" novalidate>
+          <div id="formAlert" aria-live="assertive"></div>
+
+          <!-- 1. About you -->
+          <fieldset class="fieldset">
+            <legend><span class="legend-num">1</span><span data-i18n="complaint.s1">About you</span></legend>
+            <div class="form-grid cols-2">
+              <div class="field">
+                <label for="f_name"><span data-i18n="complaint.name">Your name</span><span class="req" aria-hidden="true">*</span></label>
+                <input id="f_name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="e_name">
+                <div class="error-text" id="e_name"></div>
+              </div>
+              <div class="field">
+                <label for="f_mobile"><span data-i18n="complaint.mobile">Mobile number</span><span class="req" aria-hidden="true">*</span></label>
+                <div class="input-group">
+                  <span class="input-prefix" aria-hidden="true">+91</span>
+                  <input id="f_mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="9XXXXXXXXX" required aria-describedby="e_mobile h_mobile">
+                </div>
+                <div class="hint" id="h_mobile" data-i18n="complaint.mobile.hint">You will need this number to track your complaint.</div>
+                <div class="error-text" id="e_mobile"></div>
+              </div>
+            </div>
+            <!-- Only shown when the administrator has switched on mobile verification -->
+            <div class="otp-box" id="otpBox" hidden>
+              <div><strong data-i18n="otp.title">Verify your mobile number</strong><div class="hint" data-i18n="otp.sub">We will send a 6-digit code by SMS.</div></div>
+              <div class="otp-row">
+                <button type="button" class="btn btn-secondary btn-sm" id="otpSend" data-i18n="otp.send">Send code</button>
+              </div>
+              <div class="otp-row" id="otpEnter" hidden>
+                <input id="f_otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" aria-label="OTP" data-i18n-aria="otp.code">
+                <button type="button" class="btn btn-green btn-sm" id="otpVerify" data-i18n="otp.verify">Verify</button>
+              </div>
+              <div class="loc-status" id="otpOk" hidden><i data-icon="check-circle"></i><span data-i18n="otp.verified">Mobile number verified</span></div>
+              <div class="error-text" id="e_otp"></div>
+            </div>
+          </fieldset>
+
+          <!-- 2. Where -->
+          <fieldset class="fieldset">
+            <legend><span class="legend-num">2</span><span data-i18n="complaint.s2">Where is the problem?</span></legend>
+            <div class="form-grid cols-2">
+              <div class="field">
+                <label for="f_area"><span data-i18n="complaint.area">Area / Street name</span><span class="req" aria-hidden="true">*</span></label>
+                <input id="f_area" name="area" type="text" list="areaList" maxlength="150" autocomplete="off" required aria-describedby="e_area">
+                <datalist id="areaList"></datalist>
+                <div class="error-text" id="e_area"></div>
+              </div>
+              <div class="field">
+                <label for="f_ward" data-i18n="complaint.ward">Ward number</label>
+                <input id="f_ward" name="ward" type="number" inputmode="numeric" min="1" max="99" value="65" aria-describedby="e_ward">
+                <div class="error-text" id="e_ward"></div>
+              </div>
+              <div class="field" style="grid-column:1/-1">
+                <label for="f_landmark" data-i18n="complaint.landmark">Nearby landmark</label>
+                <input id="f_landmark" name="landmark" type="text" maxlength="200" data-i18n-placeholder="complaint.landmark.ph">
+              </div>
+            </div>
+            <div style="margin-top:.8rem">
+              <button type="button" class="btn btn-ghost btn-sm" id="locBtn"><i data-icon="locate"></i><span data-i18n="complaint.loc.btn">Use my current location</span></button>
+              <div class="loc-status" id="locStatus" hidden><i data-icon="check-circle"></i><span data-i18n="complaint.loc.ok">Location added</span> <button type="button" class="link-btn" id="locClear" data-i18n="complaint.loc.remove">Remove</button></div>
+              <div class="hint" id="locHint"></div>
+            </div>
+          </fieldset>
+
+          <!-- 3. What -->
+          <fieldset class="fieldset">
+            <legend><span class="legend-num">3</span><span data-i18n="complaint.s3">What is the problem?</span></legend>
+            <div class="cat-radio" id="catRadios" role="radiogroup" data-i18n-aria="complaint.s3"></div>
+            <div class="error-text" id="e_category"></div>
+            <div class="field" style="margin-top:1rem">
+              <label for="f_desc"><span data-i18n="complaint.desc">Describe the problem</span><span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f_desc" name="description" maxlength="2000" required data-i18n-placeholder="complaint.desc.ph" aria-describedby="e_desc c_desc"></textarea>
+              <div class="counter" id="c_desc" aria-hidden="true">0 / 2000</div>
+              <div class="error-text" id="e_desc"></div>
+            </div>
+          </fieldset>
+
+          <!-- 4. Evidence -->
+          <fieldset class="fieldset">
+            <legend><span class="legend-num">4</span><span data-i18n="complaint.s4">Add photos or a short video</span></legend>
+            <p class="hint" data-i18n="complaint.media.hint">Photos help us find and fix the problem faster. You can add up to 5 photos and 1 short video.</p>
+            <div class="upload-actions">
+              <button type="button" class="upload-btn" id="btnCamera"><i data-icon="camera"></i><span data-i18n="complaint.media.camera">Take a photo</span></button>
+              <button type="button" class="upload-btn" id="btnPhoto"><i data-icon="image"></i><span data-i18n="complaint.media.photo">Choose photos</span></button>
+              <button type="button" class="upload-btn" id="btnVideo"><i data-icon="video"></i><span data-i18n="complaint.media.video">Add a video</span></button>
+            </div>
+            <input type="file" id="inCamera" accept="image/*" capture="environment" hidden>
+            <input type="file" id="inPhoto" accept="image/jpeg,image/png,image/webp" multiple hidden>
+            <input type="file" id="inVideo" accept="video/mp4,video/webm,video/quicktime" hidden>
+            <div class="preview-grid" id="previews"></div>
+            <div class="error-text" id="e_media"></div>
+          </fieldset>
+
+          <!-- Honeypot: invisible to people, tempting to spam bots -->
+          <div class="hp" aria-hidden="true"><label>Website<input type="text" id="f_hp" tabindex="-1" autocomplete="off"></label></div>
+
+          <div class="upload-progress" id="progress" hidden><i></i></div>
+          <div class="hint center" id="progressText" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-green btn-lg btn-block" id="submitBtn"><i data-icon="send"></i><span data-i18n="complaint.submit">SUBMIT COMPLAINT</span></button>
+        </form>
+      </div>
+
+      <!-- Shown after a successful submission -->
+      <div id="successWrap" class="card success-card" hidden>
+        <div class="success-check"><i data-icon="check"></i></div>
+        <h2 data-i18n="success.title">Your complaint has been registered</h2>
+        <p data-i18n="success.sub">Please note your complaint ID. You will need it, with your mobile number, to track progress.</p>
+        <div class="code-box"><code id="newCode"></code><button type="button" class="btn btn-ghost btn-sm" id="copyCode"><i data-icon="copy"></i><span data-i18n="success.copy">Copy</span></button></div>
+        <div id="successNote"></div>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-primary btn-lg" id="trackNow" href="track.html"><i data-icon="search"></i><span data-i18n="success.track">Track this complaint</span></a>
+          <button type="button" class="btn btn-secondary btn-lg" id="another"><i data-icon="plus"></i><span data-i18n="success.another">Register another complaint</span></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/complaint.js"></script>
+</body>
+</html>

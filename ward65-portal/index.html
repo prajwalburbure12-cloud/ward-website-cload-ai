@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ward No. 65 – Hubballi-Dharwad Municipal Corporation</title>
+<meta name="description" content="Official public service portal of Ward No. 65, Hubballi-Dharwad Municipal Corporation. Report civic problems with photos and track your complaint.">
+<meta name="theme-color" content="#0b2a5b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+
+  <!-- The supplied banner is shown exactly as it is (full width, natural proportions).
+       It stays hidden until an image has actually loaded. -->
+  <section class="banner" id="bannerWrap" hidden>
+    <img id="bannerImg" alt="" data-i18n-alt="home.banner.alt" fetchpriority="high" decoding="async">
+  </section>
+
+  <section class="welcome">
+    <div class="container">
+      <h1 data-i18n="home.welcome">WELCOME TO WARD NO. 65</h1>
+      <div class="welcome-sub" data-i18n="top.hdmc">Hubballi-Dharwad Municipal Corporation</div>
+      <p class="welcome-tag" data-i18n="home.tagline">“Your Ward, Your Voice, Our Responsibility”</p>
+      <div class="btn-row">
+        <a class="btn btn-saffron btn-lg" href="complaint.html"><i data-icon="clipboard"></i><span data-i18n="home.cta.register">Register a Complaint</span></a>
+        <a class="btn btn-secondary btn-lg" href="track.html"><i data-icon="search"></i><span data-i18n="home.cta.track">Track Your Complaint</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live numbers: every figure comes from the database, nothing is typed in by hand. -->
+  <section class="section" aria-labelledby="statsH">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="stats.eyebrow">Transparency</span>
+        <h2 id="statsH" data-i18n="stats.title">Ward 65 at a glance</h2>
+        <div class="title-bar"></div>
+        <p data-i18n="stats.sub">Live figures taken directly from our complaint and project records.</p>
+      </div>
+      <div class="stats-grid" id="statsGrid" aria-live="polite"></div>
+      <p class="stats-note" id="statsNote"></p>
+    </div>
+  </section>
+
+  <section class="section section-tint" aria-labelledby="howH">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="how.eyebrow">Simple &amp; free</span>
+        <h2 id="howH" data-i18n="how.title">How to report a problem</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="steps">
+        <div class="card step reveal"><span class="step-num">1</span><div class="icon-wrap"><i data-icon="camera"></i></div><h3 data-i18n="how.s1.t">Take a photo</h3><p data-i18n="how.s1.d">Photograph the problem – a pothole, an overflowing drain, a broken street light – and fill the short form. No account needed.</p></div>
+        <div class="card step reveal"><span class="step-num">2</span><div class="icon-wrap"><i data-icon="send"></i></div><h3 data-i18n="how.s2.t">Get your complaint ID</h3><p data-i18n="how.s2.d">You immediately receive a unique complaint ID. Your complaint reaches the ward office and is assigned to the right department.</p></div>
+        <div class="card step reveal"><span class="step-num">3</span><div class="icon-wrap"><i data-icon="check-circle"></i></div><h3 data-i18n="how.s3.t">Track until it is solved</h3><p data-i18n="how.s3.d">Use your complaint ID and mobile number to see every update, from review to resolution.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="catH">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="catH" data-i18n="cats.title">What would you like to report?</h2>
+        <div class="title-bar"></div>
+        <p data-i18n="cats.sub">Choose a category to start your complaint.</p>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="representatives" aria-labelledby="repH">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="reps.eyebrow">Your elected representatives</span>
+        <h2 id="repH" data-i18n="reps.title">OUR PUBLIC REPRESENTATIVES</h2>
+        <div class="title-bar"></div>
+        <p data-i18n="reps.sub">Serving the people of Ward No. 65 with dedication.</p>
+      </div>
+      <div class="rep-grid" id="repGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="newsH">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="news.eyebrow">News &amp; notices</span>
+        <h2 id="newsH" data-i18n="news.title">Latest updates &amp; announcements</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="preview-strip cols-3" id="homeNews"></div>
+      <p class="center mt-2"><a class="btn btn-secondary" href="updates.html"><span data-i18n="news.all">View all updates</span><i data-icon="arrow-right"></i></a></p>
+    </div>
+  </section>
+
+  <section class="section section-tint" aria-labelledby="devH">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="dev.eyebrow">Development</span>
+        <h2 id="devH" data-i18n="dev.title">Recent development work in our ward</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="preview-strip cols-3" id="homeWorks"></div>
+      <div class="btn-row mt-2" style="justify-content:center">
+        <a class="btn btn-secondary" href="gallery.html"><i data-icon="images"></i><span data-i18n="dev.gallery">Photo gallery</span></a>
+        <a class="btn btn-secondary" href="works.html"><i data-icon="hard-hat"></i><span data-i18n="dev.works">All development works</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card" style="background:linear-gradient(135deg,var(--navy-900),var(--navy));color:#fff;text-align:center;border:0;padding:clamp(1.6rem,5vw,3rem)">
+        <h2 style="color:#fff" data-i18n="cta.title">See a problem? Tell us today.</h2>
+        <p style="color:#d8e4f8;max-width:560px;margin:0 auto 1.4rem" data-i18n="cta.sub">Every complaint is recorded, assigned and followed up – openly and without any charge.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-saffron btn-lg" href="complaint.html"><i data-icon="clipboard"></i><span data-i18n="home.cta.register">Register a Complaint</span></a>
+          <a class="btn btn-lg" style="background:#fff;color:var(--navy)" href="contact.html"><i data-icon="phone"></i><span data-i18n="nav.contact.full">Contact Us</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

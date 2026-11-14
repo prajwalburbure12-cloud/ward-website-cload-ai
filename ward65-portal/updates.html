@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Updates &amp; Announcements – Ward No. 65</title>
+<meta name="description" content="News, public notices, ongoing civic works and community programmes from Ward No. 65, Hubballi.">
+<meta name="theme-color" content="#0b2a5b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="updates">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.updates">Updates</span></nav>
+      <h1 data-i18n="updates.title">Latest Updates &amp; Announcements</h1>
+      <p data-i18n="updates.sub">New projects, ongoing works, public notices and community programmes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:920px">
+      <div class="filters">
+        <div><span class="filter-label" data-i18n="filter.type">Type</span><div class="chip-row" id="uType"></div></div>
+      </div>
+      <div class="hint" id="uCount" aria-live="polite" style="margin-bottom:.8rem"></div>
+      <div class="news-list" id="uList"></div>
+      <p class="center mt-2"><button type="button" class="btn btn-secondary" id="uMore" hidden data-i18n="more">Show more</button></p>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/updates.js"></script>
+</body>
+</html>

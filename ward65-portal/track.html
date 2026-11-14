@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track Your Complaint – Ward No. 65</title>
+<meta name="description" content="Track the progress of your complaint in Ward No. 65, Hubballi using your complaint ID and mobile number.">
+<meta name="theme-color" content="#0b2a5b">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="track">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.track">Track Complaint</span></nav>
+      <h1 data-i18n="track.title">Track Your Complaint</h1>
+      <p data-i18n="track.sub">Enter your complaint ID and the mobile number you used when registering.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <form id="trackForm" class="form-card" novalidate>
+        <div id="trackAlert" aria-live="assertive"></div>
+        <div class="form-grid cols-2">
+          <div class="field">
+            <label for="t_code"><span data-i18n="track.code">Complaint ID</span><span class="req" aria-hidden="true">*</span></label>
+            <input id="t_code" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="20" placeholder="W65-2611-ABCDE" aria-describedby="e_code">
+            <div class="error-text" id="e_code"></div>
+          </div>
+          <div class="field">
+            <label for="t_mobile"><span data-i18n="track.mobile">Mobile number</span><span class="req" aria-hidden="true">*</span></label>
+            <div class="input-group"><span class="input-prefix" aria-hidden="true">+91</span>
+              <input id="t_mobile" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="9XXXXXXXXX" aria-describedby="e_tmobile"></div>
+            <div class="error-text" id="e_tmobile"></div>
+          </div>
+        </div>
+        <div class="recent-codes" id="recent" hidden></div>
+        <div style="margin-top:1.2rem">
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="trackBtn"><i data-icon="search"></i><span data-i18n="track.btn">Track Complaint</span></button>
+        </div>
+        <p class="hint center" style="margin:.9rem 0 0" data-i18n="track.privacy">Your mobile number is used only to find your complaint and is never stored by this page.</p>
+      </form>
+
+      <div class="track-result" id="result" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/track.js"></script>
+</body>
+</html>
